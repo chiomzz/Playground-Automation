@@ -7,7 +7,7 @@ driver = webdriver.Chrome()
 driver.get("https://automationplayground.com/crm/login.html")
 driver.maximize_window()
 
-#login
+# login
 enter_Email_address = driver.find_element(By.ID, "email-id")
 enter_Email_address.send_keys("chike@yahoo.com")
 enter_Password = driver.find_element(By.CSS_SELECTOR, "#password")
@@ -16,11 +16,11 @@ click_submit_button = driver.find_element(By.ID, "submit-id")
 click_submit_button.click()
 time.sleep(5)
 
-#Click on New Customer Button
+# Click on New Customer Button
 click_NewCustomer_button = driver.find_element(By.ID, 'new-customer')
 click_NewCustomer_button.click()
 
-#Add Customer Details
+# Add Customer Details
 enter_email_address = driver.find_element(By.CSS_SELECTOR, '#EmailAddress')
 enter_email_address.send_keys('chike@yahoo.com')
 
@@ -50,8 +50,9 @@ click_submit_button.click()
 
 time.sleep(3)
 
-#SignOut
+# SignOut
 click_sign_out_button = driver.find_element(By.CSS_SELECTOR,"body > nav > ul > li > a")
 click_sign_out_button.click()
 
 time.sleep(3)
+driver.quit()
